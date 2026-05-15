@@ -1,0 +1,815 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --green: #009660;
+    --gray: #212121;
+    --white: #e9e9e9;
+    --black: #0c0c0c;
+    --lgray: #929292;
+}
+
+@font-face {
+    font-family: manrope;
+    src: url(../fonts/Manrope-VariableFont_wght.woff2);
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--black);
+}
+
+main{
+    padding-top: 70px;
+    
+}
+
+section{
+    overflow: hidden;
+}
+
+#icons{
+    color: var(--white);
+    font-weight: 100;
+}
+
+#icon{
+    color: var(--lgray);
+}
+
+nav{
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    border-bottom:1px solid rgba(215, 80, 233, 0.418);
+    backdrop-filter: blur(20px);
+}
+
+
+.logo{
+    display: flex;
+    line-height: 1.4;
+    gap: 10px;
+    font-family: playfair;
+    font-size: 17px;
+    font-weight: 100;
+}
+.logo img{
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.logo h1{
+    cursor: default;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 5px;
+    color: var(--white);
+    background-clip: text;
+    background-image:url(../picture/bg_gradient.png) ;
+    background-size: cover;
+    color: transparent;
+}
+
+
+.options{
+    cursor: default;
+    display: flex;
+    color: var(--lgray);
+    gap: 60px;
+    line-height: 1.4;
+    font-family: manrope;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.options h4:hover{
+    filter: drop-shadow(0 0 12px hsla(276, 100%, 50%, 5.889));
+    transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+    transform: scale(1.05);
+    color: hsl(0, 2%, 75%);
+}
+
+.profile{
+    
+    background-color: hsl(293, 100%, 50%);
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    font-family: manrope;
+    font-size: 15px;  
+}
+
+.profile:hover{
+    box-shadow: 0 0 5px 5px hsla(276, 100%, 50%, 0.589);
+    transform: scale(1.03);
+    transition: all ease .2s;
+}
+
+.profile h4{
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.nav3{
+    display: none;
+    font-family: manrope;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 10px 25px;
+    }
+
+    .logo h1{
+        font-size: 1.5rem;
+    }
+    .logo img{
+        margin-top: 5px;
+        height: 45px;
+    }
+
+    .options{
+        display: flex;
+        width: 60vw;
+    }
+
+    .profile{
+        display: flex;
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 10px;
+    }
+
+    .logo h1{
+        font-size: 2rem;
+    }
+    .logo img{
+        margin-top: 5px;
+        height: 45px;
+    }
+
+    .options{
+        display: flex;
+        width: 60vw;
+        margin-right: 30px;
+    }
+
+
+    .profile{
+        display: none;
+
+    }
+    .nav3{
+        display: flex;
+        padding-left: 5px;
+    }
+    .nav3 h4{
+        color: var(--lgray);
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    nav {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .logo h1{
+        font-size: 25px;
+    }
+    .logo img{
+        height: 45px;
+    }
+
+    .options{
+        display: none;
+    }
+
+    .profile{
+        display: none;
+    }
+    
+    .nav3{
+        display: flex;
+        padding-left: 5px;
+    }
+    .nav3 h4:hover{
+        color: hsl(0, 0%, 79%);
+    }
+    .nav3 h4{
+        color: var(--lgray);
+        font-size: 30px;
+    }
+}
+
+
+.section1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0 0 10px 5px hsla(286, 100%, 50%, 0.851);
+
+    background-repeat: no-repeat;
+    background-image:url(../picture/BG_Anime_Banner.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.section1 .left{
+    
+    margin-top: 50px;
+    position: relative;
+    padding: 10px 20px;
+    width: min(90%, 700px);
+}
+
+.section1 .left h1{
+    margin-top: 30px;
+    font-weight: 700;
+
+    font-family: playfair;
+    font-size: clamp(55px, 9vw, 100px);
+    line-height: 0.9;
+    color: var(--white);
+}
+
+.section1 .left .info h3{
+    margin-top: 15px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: manrope;
+    font-size: clamp(14px, 1.3vw, 20px);
+    font-weight: 500;
+    color: rgb(161, 160, 160);
+}
+
+.section1 .left .action_btns {
+
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+    text-align: center;
+    
+    white-space: nowrap;
+    font-family: manrope;
+
+    
+}
+
+.left .action_btns button:hover{
+    transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+    transform: scale(0.95);
+    box-shadow: 0 0 6px 6px #d400ff;
+}
+
+
+
+.section1 .left .action_btns .action_left button{
+    background-color: #ec5be3;
+    color: var(--white);
+    align-items: center;
+    font-size: 20px;
+    padding: 20px 30px;
+    border-radius: 50px;
+}
+
+.section1 .left .action_btns .action_right button{
+    filter: drop-shadow(0 0 12px hsla(276, 100%, 50%, 5.889));
+    font-size: 20px;
+    color: var(--white);
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 50px;
+}
+
+.section1 .left .action_btns .action_right {
+    border: 1px solid #ec5be3 ;
+    border-radius: 50px;
+}
+
+
+@media (max-width: 1200px) {
+    .section1{
+        height: 60vh;
+    }
+    .section1 .left h1{
+    font-size: 4em;
+    }
+    .section1 .left .info h3{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: clamp(14px, 1vw, 20px);
+    font-weight: 500;
+    }
+    .section1 .left .action_btns button {
+    justify-content: center;
+    display: flex;
+    font-size: clamp(14px, 1vw, 22px);
+    white-space: nowrap;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section1 .left .action_btns button{
+    align-items: center;
+    text-align: center;
+    font-size: clamp(14px, 1vw, 20px);
+    white-space: nowrap;
+    }
+    
+}
+
+@media (max-width: 900px) {
+    .section1 .left .action_btns button {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: clamp(14px, 1vw, 20px);
+        white-space: nowrap;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .section1 .left .info h3{
+        font-size: clamp(14px, 1vw, 20px);
+    }
+
+    .section1 .left .action_btns .action_left button {
+    padding: 10px;
+    padding-top: 12px;
+    font-size:2.1vw;
+    white-space: nowrap;
+    }
+
+    .section1 .left .action_btns .action_right button{
+    padding: 10px;
+    padding-top: 12px;
+    font-size:2.1vw;
+    white-space: nowrap;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .section1 .left .info h3{
+        font-size: clamp(10px, 1vw, 20px);
+    }
+    .section1 .left .action_btns .action_left button{
+    padding: 10px;
+    padding-top: 12px;
+    font-size:2vw;
+    white-space: nowrap;
+    }
+
+    .section1 .left .action_btns .action_right button {
+    padding: 10px;
+    padding-top: 12px;
+    font-size:2vw;
+    white-space: nowrap;
+    }
+
+}
+
+.section2{
+    background-color: #0D0D1A;
+    height: auto;
+    border-top:1px solid rgba(45, 26, 80, 0.418);
+    position: relative;
+    padding: 10px 20px;
+}
+
+.section2 h2{
+    margin-top: 50px;
+    font-weight: 700;
+    text-align: center;
+    font-family: playfair;
+    font-size: clamp(55px, 9vw, 70px);
+    line-height: 0.9;
+    color: var(--white);
+}
+
+.section2 .gradient{
+    background-image:url(../picture/bg_gradient_text.png) ;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+}
+
+.section2 h4{
+    margin-top: 30px;
+    font-weight: 700;
+    text-align: center;
+    font-family: manrope;
+    font-size: clamp(15px, 9vw, 20px);
+    line-height: 0.9;
+    color: var(--white);
+}
+
+.section2 .options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.section2 .options h3{
+    color: var(--white);
+    padding: 10px 35px;
+    border-radius: 50px;
+}
+
+.section2 .options button .genre{
+    background-color: hsla(276, 100%, 50%, 0.589);
+    box-shadow: 0 0 5px 5px hsla(276, 100%, 50%, 0.589);
+}
+
+.section2 .options .title{
+    background-color: hsla(276, 100%, 50%, 0.589);
+    box-shadow: 0 0 5px 5px hsla(276, 100%, 50%, 0.589);
+}
+
+.section2 .options h3:hover{
+    box-shadow: 0 0 5px 5px hsl(276, 100%, 50%);
+    background-color: hsl(276, 100%, 50%);
+    transition: all ease .3s;
+
+}
+
+@media (max-width:1200px) {
+    .section2 h2{
+        font-size: 4em;
+    }
+
+    .section2 h4{
+    font-size: clamp(14px, 1em, 30px);
+    }
+}
+
+@media (max-width:1000px) {
+    .section2 .options{
+        width: 100%;
+    }
+}
+
+@media (max-width:800px) {
+    .section2 h2{
+        font-size: 3em;
+    }
+
+    .section2 h4{
+        font-size: .7rem;
+    }
+
+    .section2 .options button{
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .section2 h2{
+        font-size: 5.5vw;
+    }
+
+    .section2 h4{
+        font-size: 1.8vw;
+    }
+
+    .section2 .options button{
+        font-size: 1.8vw;
+    }
+    
+}
+.section2{
+    width: 100%;
+}
+
+.section2 .topics{
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 80px;
+
+    width: 100%;
+}
+
+.section2 .topics .ani:hover{
+    transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+    transform: scale(0.95);
+
+    transition: ease-in-out .2s;
+    border: 1px solid var(--lgray);
+
+}
+.section2 .topics .ani{
+    font-family: manrope;
+
+    flex: 0 0 calc(25% - 30px);
+
+    max-width: 180px;
+    min-width: 130px;
+
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    row-gap: 10px;
+
+    border-radius: 20px;
+    border: 2px solid var(--gray);
+
+    background-color: transparent;
+
+    text-align: center;
+}
+
+.section2 .topics .ani h5{
+    color: var(--lgray);
+    font-size: clamp(15px, 1.2vw, 25px);
+}
+
+.section2 .topics .ani i{
+    color: var(--lgray);
+    font-size: clamp(15px, 1vw, 25px);
+}
+
+@media (max-width: 600px) {
+    .section2 .topics #ani{
+        display: none;
+    }
+    
+}
+
+.section3{
+    padding: 60px 60px;
+    flex-direction: column;
+    background-color: #2b184390;
+    width: 100%;
+}
+
+.section3 h4{
+    cursor: default;
+    
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: manrope;
+
+    width: fit-content;
+    padding: 6px 15px;
+
+    border-radius: 50px;
+    color: hsl(293, 93%, 43%);
+    border: 1px solid hsl(293, 100%, 50%);
+}
+
+.section3 h4:hover{
+    filter: drop-shadow(0 0 12px hsl(293, 100%, 50%));
+    box-shadow: 0 0 2px 2px hsl(293, 100%, 50%);
+}
+
+
+.section3 .head h1{
+    margin: 30px 0px;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 100;
+    color: var(--white);
+    letter-spacing: 1px;
+    font-family: playfair;
+
+}
+
+
+.section3 .sub-head h3{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+
+    font-family: manrope;
+    color: var(--white);
+}
+
+.section3 .pick{
+    
+    cursor: default;
+    margin-top: 100px;
+}
+
+.section3 .pick h2:hover{
+    transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 12px hsl(293, 100%, 50%));
+}
+
+
+.section3 .pick h2{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: manrope;
+
+    color: var(--white);
+    border-radius: 100px;
+    width: fit-content;
+    margin: auto;
+
+    background-image:url(../picture/bg_gradient_text.png) ;
+    background-size: cover;
+}
+
+@media (max-width:1200px) {
+    .section3 h4{
+        font-size: 1vw;
+    }
+    .section3 .head h1{
+        font-size: 6vw;
+    }
+
+    .section3 .sub-head h3{
+        font-size: 1vw;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .section3 h4{
+        font-size: 1.1vw;
+    }
+    .section3 .head h1{
+        font-size: 5vw;
+    }
+
+    .section3 .sub-head h3{
+        font-size: 1.3vw;
+    }
+
+    .section3 .pick h2{
+        font-size: 1.5vw;
+        padding: 15px 20px;
+    }
+    
+}
+
+@media (max-width:600px) {
+
+     .section3 .head h1{
+        font-size: 2em;
+    }
+
+    .section3 .sub-head {
+        display: none;
+    }
+
+    .section3 .pick{
+        margin-top: 30px
+    }
+}
+
+footer{
+    background-color: var(--gray);
+    display: flex;
+    width: 100%;
+    height: 40vh;
+}
+
+footer .title{
+    cursor: default;
+
+    padding: 60px 20px;
+    width: 50%;
+}
+
+footer .title h2:hover{
+    filter: drop-shadow(0 0 12px #74018b);
+}
+
+footer .title h2{
+    line-height: 1.4;
+    font-family: playfair;
+    font-size:40px;
+    font-weight: 600;
+    color: #d400ff;
+}
+
+footer .navi{
+    cursor: default;
+
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    color: var(--lgray);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+footer .navi h2{
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+footer .navi h3{
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+footer .navi h2:hover{
+    color: var(--white);
+}
+footer .navi h3:hover{
+    color: var(--white);
+}
+
+@media (max-Width:1200px) {
+    footer .title h2{
+        font-size: 3em;
+    }
+}
+
+@media (max-Width:800px) {
+    footer.title{
+        margin: 0px;
+        padding: 0px;
+        width: 50px;
+    }
+    footer .title h2{
+        font-size: 3em;
+    }
+
+    footer .navi h2{
+        padding-top: 10px;
+        font-size: 1.6em;
+    }
+
+    footer .navi h3{
+        font-size: 1em;
+    }
+}
+
+@media (max-Width:700px) {
+    footer .title h2{
+        font-size: 2em;
+    }
+}
